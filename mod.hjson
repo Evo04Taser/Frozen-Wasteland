@@ -5,4 +5,6 @@ description: "A mod that adds decent amount of content and planet, my first java
 
 As always if you liked the mod then give it a star in GitHub!
 
-Discord: https://discord.gg/XPRwPCqFqC (It will not expire!)
+Discord: https://discord.gg/XPRwPCqFqC (It will not expire!)"
+version: "1.2"
+minGameVersion: "135"
