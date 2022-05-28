@@ -1,5 +1,5 @@
 # Frozen-Wasteland
 My first java mod, currently a work in progress 
 
-Help me sprite and code! https://discord.gg/XPRwPCqFqC (This link never expires!)
+I don't know how to code the "build.gradle", "gradlew", and "gradlew.bat", so if you know how then then fork this repository and commit those changes!
 
