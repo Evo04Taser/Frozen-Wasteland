@@ -25,7 +25,7 @@ import static mindustry.Vars.*;
 
 public class HardenedConduit extends ArmoredConduit{
 
-    public TextureRegion topRegion;
+    public @Load("@-top") TextureRegion topRegion;
 
     public HardenedConduit(String name){
         super(name);
@@ -43,7 +43,7 @@ public class HardenedConduit extends ArmoredConduit{
     public void drawRequestRegion(BuildPlan req, Eachable<BuildPlan> list){
         super.drawRequestRegion(req, list);
 
-        Draw.rect(glassRegion, req.drawx(), req.drawy());
+        Draw.rect(topRegion, req.drawx(), req.drawy());
     }
 
     @Override
