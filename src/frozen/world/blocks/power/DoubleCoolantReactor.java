@@ -35,4 +35,20 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
     public DoubleCoolantReactor(String name){
         super(name);
-        rebuildable = false
+        rebuildable = false;
+        hasItems = true;
+        hasLiquids = true;
+        flags = EnumSet.of(BlockFlag.reactor, BlockFlag.generator);
+        schematicPriority = -5;
+        envEnabled = Env.any;
+    }
+
+    @Override
+    public void setStats(){
+        super.setStats();
+
+        if(hasItems){
+            stats.add(Stat.productionTime, itemDuration / 60f, StatUnit.seconds);
+        }
+    }
+}
