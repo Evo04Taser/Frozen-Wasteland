@@ -29,7 +29,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
     public float powerUse = 3f;
     public float itemDuration = 120f;
     public int itemCapacity = 20f;
-    public int liquidCapacity = 50f;
+    public float liquidCapacity = 50f;
 
     public @Load("@-top") TextureRegion topRegion;
 
@@ -51,4 +51,16 @@ public class DoubleCoolantReactor extends PowerGenerator{
             stats.add(Stat.productionTime, itemDuration / 60f, StatUnit.seconds);
         }
     }
+
+    @Override
+    public void setBars
+        super.setBars
+
+        bars.add("poweroutput", (GeneratorBuild entity) -> new Bar(() ->
+        Core.bundle.format("bar.poweroutput",
+        Strings.fixed(Math.max(entity.getPowerProduction() - consumes.getPower().usage, 0) * 60, 1)),
+        () -> Pal.powerBar,
+        () -> entity.productionEfficiency));
+    }
 }
+
