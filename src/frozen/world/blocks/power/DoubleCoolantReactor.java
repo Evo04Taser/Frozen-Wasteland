@@ -62,5 +62,8 @@ public class DoubleCoolantReactor extends PowerGenerator{
         () -> Pal.powerBar,
         () -> entity.productionEfficiency));
     }
+
+    @Override
+    public void setStats
 }
 
