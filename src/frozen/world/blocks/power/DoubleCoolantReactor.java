@@ -64,6 +64,8 @@ public class DoubleCoolantReactor extends PowerGenerator{
     }
 
     @Override
-    public void setStats
+    public void updateTile(){
+        if(consValid() && power.status >= 0.99f){
+            //
 }
 
