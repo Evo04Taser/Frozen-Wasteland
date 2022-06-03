@@ -17,5 +17,6 @@ public class FrozenWasteland extends Mod{
     @Override
     public void loadContent(){
         new FrozenItems().load();
+        new FrozenStatusEffects().load();
     }
 }
