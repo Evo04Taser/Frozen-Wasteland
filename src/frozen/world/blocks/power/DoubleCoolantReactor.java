@@ -144,14 +144,14 @@ public class DoubleCoolantReactor extends PowerGenerator{
             ConsumeLiquid cliquid = coolant(ConsumeType.liquid);
             ConsumeItem citem = fuel(ConsumeType.item)
 
-            int fuel = items.get(item);
+            int fuel = items.get(fuel);
             float 100 = (float)fuel;
             productionEfficiency = 100;
       }
 
       
 
-      public class NuclearReactorBuild extends GeneratorBuild{
+      public class DoubleCoolantReactorBuild extends GeneratorBuild{
          @Override
           public void draw(){
              super.draw();
