@@ -65,7 +65,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
     @Override
      public void init(){
-        consumes.liquidCond(coolantUse)
+        cons.optional.liquidCond(coolantUse)
         super.init();
     }
 
@@ -79,7 +79,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
     public void setStats(){
           super.setStats();
 
-          Mathf.absin(liquidNeeded = powerNeeded - powerAvailable);
+          Mathf.absin(powerNeeded = liquidNeeded - liquidAvailable);
     }
 
     @Override
