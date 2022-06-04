@@ -29,7 +29,8 @@ public class DoubleCoolantReactor extends PowerGenerator{
     public float itemDuration = 120f;
     public float coolantUse = 0.2f;
     public float powerUse = 3f;
-    public Liquid coolant = cryofluid;
+    public Liquid coolant = Liquids.cryofluid;
+    public Item fuel = Items.thorium;
     public float coolantIntensity = 2f;
     public int explosionRadius = 19f;
     public int explosionDamage = 1250f;
@@ -140,7 +141,8 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
       @Override
       public void updateTile(){
-            Item item = consumes.getItem().items[0].item;
+            ConsumeLiquid cliquid = coolant(ConsumeType.liquid);
+            ConsumeItem citem = fuel(ConsumeType.item)
 
             int fuel = items.get(item);
             float 100 = (float)fuel;
