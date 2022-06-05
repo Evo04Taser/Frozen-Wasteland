@@ -169,5 +169,10 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
                Draw.rect(topRegion, x, y);
            }
+
+           @Override
+           public float efficiencyScale(){
+              return baseEfficiency * powerProductionMultiplier();
+           }
       }
 }
