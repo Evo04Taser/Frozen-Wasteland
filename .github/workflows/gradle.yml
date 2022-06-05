@@ -22,7 +22,7 @@ jobs:
       with:
         java-version: 1.14
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      run: gradlew
     - name: Build jar file And check for errors
       run: |
          stacktrace
