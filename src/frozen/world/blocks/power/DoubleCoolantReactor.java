@@ -55,6 +55,11 @@ public class DoubleCoolantReactor extends PowerGenerator{
     }
 
     @Override
+    public TextureRegion[] icons(){
+       return new TextureRegion[]{bottomRegion, region};
+    }
+
+    @Override
     public void setStats(){
         super.setStats();
 
