@@ -33,4 +33,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Frozen-package
-        path: build/libs/Vanilla-Upgraded.jar
+        path: build/libs/Frozen-Wasteland.jar
