@@ -23,10 +23,6 @@ jobs:
         java-version: 1.14
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Debug
-      run: info
-    - name: Scanner
-      run: scan
     - name: Build jar file
       run:  ./gradlew deploy
     - name: Upload built jar file
