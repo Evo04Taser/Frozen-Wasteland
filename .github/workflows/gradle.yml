@@ -25,6 +25,11 @@ jobs:
       run: chmod +x gradlew
     - name: Build jar file
       run: ./gradlew deploy
+    - name: Check for errors
+      run: |
+        stacktrace
+        info
+        scan
     - name: Upload built jar file
       uses: actions/upload-artifact@v2
       with:
