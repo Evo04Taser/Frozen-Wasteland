@@ -30,7 +30,7 @@ public class HardenedConduit extends ArmoredConduit{
     public HardenedConduit(String name){
         super(name);
         solid = true;
-        armor = 3
+        armor = 3;
     }
 
     @Override
