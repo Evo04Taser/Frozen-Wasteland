@@ -34,8 +34,8 @@ public class StatusEffects implements ContentList{
                 });
             });
         }};
-        incinerating = new StatusEffect("incinerating")
-            color = Color.valueOf("ff5b00")
+        incinerating = new StatusEffect("incinerating"){{
+            color = Color.valueOf("ff5b00");
             speedMultiplier = 0.15f;
             healthMultiplier = 0.9f;
             effect = Fx.melting
