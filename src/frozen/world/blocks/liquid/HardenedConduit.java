@@ -1,4 +1,4 @@
-package frozen.world.blocks.distribution;
+package frozen.world.blocks.liquid;
 
 import arc.*;
 import arc.func.*;
@@ -11,7 +11,7 @@ import arc.util.*;
 import arc.util.io.*;
 import mindustry.content.*;
 import mindustry.entities.units.*;
-import mindustry.world.blocks.distribution.*;
+import mindustry.world.blocks.liquid.*;
 import mindustry.game.*;
 import mindustry.gen.*;
 import mindustry.graphics.*;
