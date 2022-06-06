@@ -3,10 +3,9 @@ package frozen.world.meta;
 import arc.struct.*;
 import mindustry.*;
 
-public class Attribute{
+public class FrozenAttribute{
     public static  Attribute[] all = {};
-    public static ObjectMap<String, 
-Attribute> map = new ObjectMap<>(); 
+    public static ObjectMap<String, Attribute> map = new ObjectMap<>(); 
 
     public static final Attribute 
     wind = add("wind"),
