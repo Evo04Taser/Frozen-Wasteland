@@ -63,7 +63,7 @@ public class HardenedConveyor extends ArmoredConveyor{
                 stats.add(Stat.armor, armor, StatUnit.none);
             }
         }
-
+    }
     public class HardenedConveyorBuild extends ArmoredConveyorBuild{
         @Override
         public void draw(){
