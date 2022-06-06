@@ -6,7 +6,7 @@ import mindustry.type.*;
 
 public class Items implements ContentList{
     public static Item
-    snow, snow-block, snow-brick;
+    snow, snowBlock, snowBrick;
 
     @Override
     public void load(){
