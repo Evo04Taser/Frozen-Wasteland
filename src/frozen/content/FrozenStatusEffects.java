@@ -22,7 +22,7 @@ public class StatusEffects implements ContentList{
             color = Color.valueOf("1891db");
             speedMultiplier = 0.4f;
             healthMultiplier = 0.7f;
-            effect = Fx.freezing
+            effect = Fx.freezing;
             damage = 0.4f;
             transitionDamage = 23f; 
             
@@ -38,7 +38,7 @@ public class StatusEffects implements ContentList{
             color = Color.valueOf("ff5b00");
             speedMultiplier = 0.15f;
             healthMultiplier = 0.9f;
-            effect = Fx.melting
+            effect = Fx.melting;
             damage = 1.3f;
 
             init(() -> {
