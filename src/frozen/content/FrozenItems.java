@@ -4,7 +4,7 @@ import arc.graphics.*;
 import mindustry.ctype.*;
 import mindustry.type.*;
 
-public class Items implements ContentList{
+public class FrozenItems implements ContentList{
     public static Item
     snow, snowBlock, snowBrick;
 
