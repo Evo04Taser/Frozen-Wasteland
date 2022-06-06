@@ -12,7 +12,7 @@ import mindustry.graphics.*;
 
 import static mindustry.Vars.*;
 
-public class StatusEffects implements ContentList{
+public class FrozenStatusEffects implements ContentList{
     public static StatusEffect frostbite, incinerating;
 
 
