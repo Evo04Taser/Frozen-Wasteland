@@ -8,7 +8,6 @@ import arc.math.geom.*;
 import arc.struct.*;
 import arc.util.*;
 import arc.util.io.*;
-import mindustry.annotations.Annotations.*;
 import mindustry.content.*;
 import mindustry.entities.*;
 import mindustry.game.EventType.*;
@@ -70,7 +69,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
     @Override
      public void init(){
-        cons.optional.liquidCond(coolantUse)
+        cons.optional.liquidCond(coolantUse);
         super.init();
     }
 
@@ -118,7 +117,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
           stats.add(Stat.powerProduction, 60f / powerProduction, StatUnit.powerUnitsSecond);
         if(coolantIntensity != 1){
-            stats.add(Stat.boostEffect, powerProductionMultiplier, StatUnit.timesPower)
+            stats.add(Stat.boostEffect, powerProductionMultiplier, StatUnit.timesPower);
          }
        }
 
@@ -147,7 +146,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
       @Override
       public void updateTile(){
             ConsumeLiquid cliquid = coolant(ConsumeType.liquid);
-            ConsumeItem citem = fuel(ConsumeType.item)
+            ConsumeItem citem = fuel(ConsumeType.item);
 
             int fuel = items.get(fuel);
             float 100 = (float)fuel;
