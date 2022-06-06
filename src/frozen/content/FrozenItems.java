@@ -22,6 +22,6 @@ public class Items implements ContentList{
 
         snowBrick = new Item("snow-brick", Color.valueOf("ffffff")){{
             cost = 1.5f;
-        }}
+        }};
     }
 }
