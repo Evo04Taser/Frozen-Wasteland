@@ -2,7 +2,7 @@ package frozen.world.blocks.power;
 
 import mindustry.type.*;
 import mindustry.world.meta.*;
-
+import mindustry.world.blocks.power.*;
 public class ChargeGenerator extends ItemLiquidGenerator{
 
     public ChargeGenerator(String name){
