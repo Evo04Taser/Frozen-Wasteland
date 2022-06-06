@@ -30,7 +30,7 @@ public class HardenedConveyor extends ArmoredConveyor{
     public HardenedConveyor(String name){
         super(name);
         solid = true;
-        armor = 3
+        armor = 3;
     }
 
     @Override
