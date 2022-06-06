@@ -63,7 +63,7 @@ public class HardenedConduit extends ArmoredConduit{
                 stats.add(Stat.armor, armor, StatUnit.none);
             }
         }
-
+    }
     public class HardenedConduitBuild extends ArmoredConduitBuild{
         @Override
         public void draw(){
