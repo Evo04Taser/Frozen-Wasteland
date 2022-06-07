@@ -32,8 +32,8 @@ public class DoubleCoolantReactor extends PowerGenerator{
     public Liquid coolant = Liquids.cryofluid;
     public Item fuel = Items.thorium;
     public float coolantIntensity = 2f;
-    public int explosionRadius = 19f;
-    public int explosionDamage = 1250f;
+    public float explosionRadius = 19f;
+    public float explosionDamage = 1250f;
 
     protected float coolantMultiplier;
     protected float powerProductionMultiplier;
