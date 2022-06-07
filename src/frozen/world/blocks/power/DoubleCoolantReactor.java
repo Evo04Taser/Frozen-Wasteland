@@ -38,8 +38,8 @@ public class DoubleCoolantReactor extends PowerGenerator{
     protected float coolantMultiplier;
     protected float powerProductionMultiplier;
 
-    public @Load("@-liquid") TextureRegion liquidRegion;
-    public @Load("@-top") TextureRegion topRegion;
+    public TextureRegion liquidRegion;
+    public TextureRegion topRegion;
 
     public DoubleCoolantReactor(String name){
         super(name);
@@ -56,7 +56,19 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
     @Override
     public TextureRegion[] icons(){
-       return new TextureRegion[]{region, topRgion};
+       return new TextureRegion[]{region, topRegion};
+    }
+
+    @Override
+    public void load(){
+      super.load();
+      topRegion = Core.atlas.find(name + "-top");
+    }
+
+    @Override
+    public void load(){
+      super.load();
+      liquidRegion = Core.atlas.find(name + "-liquid");
     }
 
     @Override
