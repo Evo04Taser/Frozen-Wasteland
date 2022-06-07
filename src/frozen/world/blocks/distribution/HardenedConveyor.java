@@ -25,7 +25,7 @@ import static mindustry.Vars.*;
 
 public class HardenedConveyor extends ArmoredConveyor{
 
-    public @Load("@-top") TextureRegion topRegion;
+    public TextureRegion topRegion;
 
     public HardenedConveyor(String name){
         super(name);
