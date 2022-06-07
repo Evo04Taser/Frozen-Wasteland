@@ -25,7 +25,7 @@ import static mindustry.Vars.*;
 
 public class HardenedConduit extends ArmoredConduit{
 
-    public @Load("@-top") TextureRegion topRegion;
+    public TextureRegion topRegion;
 
     public HardenedConduit(String name){
         super(name);
