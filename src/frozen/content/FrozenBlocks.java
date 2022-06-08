@@ -1,14 +1,5 @@
 package frozen.content;
-/*
-Evo04Taser, if you're reading this, remember that 
-if you want to make a custom block that extends 
-the vanilla content for your mod, make an object instead
-of a class. except if you want to make a new type of
-block. if that's the case, you can make a new class for
-that block.
 
-- 1237
-*/
 import arc.graphics.*;
 import arc.math.*;
 import arc.struct.*;
@@ -50,13 +41,12 @@ public class FrozenBlocks {
 	hardenedConveyor,
 	hardenedConduit;
 	public static void load(){
-		// remember to change all the field values
-		hardenedConveyor = new ArmoredConveyor("hardened-conveyor"){{
+		hardenedConveyor = new HardenedConveyor("hardened-conveyor"){{
 			requirements(Category.distribution, with(Items.copper, 1));
 			speed = 1;
 			health = 200;
 		}};
-		hardenedConduit = new ArmoredConduit("hardened-conduit"){{
+		hardenedConduit = new HardenedConduit("hardened-conduit"){{
 			requirements(Category.liquid, with(Items.copper, 1));
 			liquidCapacity = 20;
 			health = 75;
