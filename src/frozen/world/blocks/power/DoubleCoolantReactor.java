@@ -67,15 +67,6 @@ public class DoubleCoolantReactor extends PowerGenerator{
     }
 
     @Override
-    public void setStats(){
-        super.setStats();
-
-        if(hasItems){
-            stats.add(Stat.productionTime, itemDuration / 60f, StatUnit.seconds);
-        }
-    }
-
-    @Override
      public void init(){
         cons.optional.liquidCond(coolantUse);
         consumes.powerCond(powerUse);
@@ -110,7 +101,9 @@ public class DoubleCoolantReactor extends PowerGenerator{
         @Override
         public void setStats(){
           super.setStats();
-
+          if(hasItems){
+             stats.add(Stat.productionTime, itemDuration / 60f, StatUnit.seconds);
+          }
           stats.add(Stat.powerProduction, 60f / powerProduction, StatUnit.powerUnitsSecond);
           if(coolantIntensity != 1){
               stats.add(Stat.boostEffect, powerProductionMultiplier, StatUnit.timesPower);
