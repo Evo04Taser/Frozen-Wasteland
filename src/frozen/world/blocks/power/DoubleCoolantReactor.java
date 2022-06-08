@@ -63,11 +63,6 @@ public class DoubleCoolantReactor extends PowerGenerator{
     public void load(){
       super.load();
       topRegion = Core.atlas.find(name + "-top");
-    }
-
-    @Override
-    public void load(){
-      super.load();
       liquidRegion = Core.atlas.find(name + "-liquid");
     }
 
@@ -83,20 +78,8 @@ public class DoubleCoolantReactor extends PowerGenerator{
     @Override
      public void init(){
         cons.optional.liquidCond(coolantUse);
+        consumes.powerCond(powerUse);
         super.init();
-    }
-
-    @Override
-    public void init(){
-       consumes.powerCond(powerUse);
-       super.init();
-    }
-
-    @Override
-    public void setStats(){
-          super.setStats();
-
-          Mathf.absin(powerNeeded = liquidNeeded - liquidAvailable);
     }
 
     @Override
@@ -129,27 +112,16 @@ public class DoubleCoolantReactor extends PowerGenerator{
           super.setStats();
 
           stats.add(Stat.powerProduction, 60f / powerProduction, StatUnit.powerUnitsSecond);
-        if(coolantIntensity != 1){
-            stats.add(Stat.boostEffect, powerProductionMultiplier, StatUnit.timesPower);
-         }
-       }
-
-       @Override
-       public void setStats(){
-          super.setStats();
-
+          if(coolantIntensity != 1){
+              stats.add(Stat.boostEffect, powerProductionMultiplier, StatUnit.timesPower);
+          }
           Mathf.absin(powerProductionMultiplier = coolantIntensity * coolantMultiplier);
-       }
-
-      @Override
-      public void setStats(){
-          super.setStats();
 
           if(liquid < 0){
 
           coolantMultiplier = 0f;
           }
-          
+          Mathf.absin(powerNeeded = liquidNeeded - liquidAvailable);
           if(liquid > 100){
 
           coolantMultiplier = 1f;
@@ -174,18 +146,11 @@ public class DoubleCoolantReactor extends PowerGenerator{
              super.draw();
 
              Draw.color(liquids.current().color);
-               Draw.alpha(liquids.currentAmount() / liquidCapacity);
-               Draw.rect(liquidRegion, x, y);
-           }
-
-           @Override
-           public void draw(){
-               super.draw();
-
-               Draw.z(Layer.blockOver + 0.2f);
-
-               Draw.rect(topRegion, x, y);
-           }
+             Draw.alpha(liquids.currentAmount() / liquidCapacity);
+             Draw.rect(liquidRegion, x, y);
+             Draw.z(Layer.blockOver + 0.2f);
+             Draw.rect(topRegion, x, y);
+         }
 
            @Override
            public float efficiencyScale(){
