@@ -36,6 +36,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
     public float explosionDamage = 1250f;
 
     protected float coolantMultiplier;
+    protected float internalCoolantIntensity;
     protected float powerProductionMultiplier;
 
     public TextureRegion liquidRegion;
@@ -105,13 +106,15 @@ public class DoubleCoolantReactor extends PowerGenerator{
           if(hasItems){
              stats.add(Stat.productionTime, itemDuration / 60f, StatUnit.seconds);
           }
-          Mathf.absin(powerProductionMultiplier = power * powerProductionFactor)
+          Mathf.absin(powerProductionMultiplier = power * powerProductionFactor);
 
-          Mathf.absin(powerProductionFactor = coolantIntensity * coolantMultiplier);
+          Mathf.absin(powerProductionFactor = internalCoolantIntensity * coolantMultiplier);
 
-          Mathf.absin(coolantMultiplier = liquidAvailable / liquidInput);
+          Mathf.absin(internalCoolantIntensity = coolantIntensity - 1f);
 
-          Mathf.absin(powerNeeded = liquidInput - liquidAvailable);
+          Mathf.absin(coolantMultiplier = liquidInput / liquidCapacity);
+
+          Mathf.absin(powerNeeded = liquidCapacity - liquidInput);
       }
 
       @Override
