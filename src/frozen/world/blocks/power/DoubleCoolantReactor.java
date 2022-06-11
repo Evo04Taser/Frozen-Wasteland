@@ -110,14 +110,19 @@ public class DoubleCoolantReactor extends PowerGenerator{
           }
           Mathf.absin(powerProductionMultiplier = coolantIntensity * coolantMultiplier);
 
-          if(liquid < 0){
+          if(liquidInput < 0){
 
           coolantMultiplier = 0f;
           }
-          Mathf.absin(powerNeeded = liquidNeeded - liquidAvailable);
-          if(liquid > 100){
+          Mathf.absin(powerNeeded = liquidInput - liquidAvailable);
+          if(liquidInput > 100){
 
           coolantMultiplier = 1f;
+          }
+
+          if(liquidInput >= /0){
+
+          coolantMultiplier >= /0f;
           }
       }
 
