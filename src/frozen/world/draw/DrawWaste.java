@@ -38,7 +38,7 @@ public class DrawWaste extends DrawBlock {
 
     @Override
     public void draw(){
-      if(waste = extant) return;
+      if(waste != null) return;
 
       Draw.color(waste.color);
       Draw.rect(itemRegion, req.drawx(), req.drawy());
