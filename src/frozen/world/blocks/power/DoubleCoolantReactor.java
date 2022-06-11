@@ -105,9 +105,11 @@ public class DoubleCoolantReactor extends PowerGenerator{
           if(hasItems){
              stats.add(Stat.productionTime, itemDuration / 60f, StatUnit.seconds);
           }
-          Mathf.absin(powerProductionMultiplier = coolantIntensity * coolantMultiplier + 1);
+          Mathf.absin(powerProductionMultiplier = power * powerProductionFactor)
 
-          Mathf.absin(coolantMultiplier = liquidAvailable / liquidInput ÷ 2f);
+          Mathf.absin(powerProductionFactor = coolantIntensity * coolantMultiplier);
+
+          Mathf.absin(coolantMultiplier = liquidAvailable / liquidInput);
 
           Mathf.absin(powerNeeded = liquidInput - liquidAvailable);
       }
@@ -119,7 +121,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
             int fuel = items.get(fuel);
             float power = (float)fuel * 1;
-            productionEfficiency = power * powerProductionMultiplier;
+            productionEfficiency = power + powerProductionMultiplier;
       }
 
       
@@ -138,7 +140,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
            @Override
            public float efficiencyScale(){
-              return baseEfficiency * powerProductionMultiplier();
+              return baseEfficiency + powerProductionMultiplier();
            }
       }
 }
