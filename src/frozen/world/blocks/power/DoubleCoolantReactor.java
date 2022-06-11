@@ -35,6 +35,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
     public float powerUse = 3f;
     public Liquid coolant = Liquids.cryofluid;
     public Item fuel = Items.thorium;
+    public int fuelAmount = 1f;
     public float coolantIntensity = 2f;
     public float explosionRadius = 19f;
     public float explosionDamage = 1250f;
@@ -42,6 +43,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
     protected float coolantMultiplier;
     protected float internalCoolantIntensity;
+    protected float internalPowerProduction;
     protected float powerProductionMultiplier;
 
     public TextureRegion liquidRegion;
@@ -74,6 +76,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
     @Override
      public void init(){
+        consumes.itemCond(fuelAmount);
         consumes.optional.liquidCond(coolantUse);
         consumes.powerCond(powerUse);
         super.init();
@@ -111,9 +114,11 @@ public class DoubleCoolantReactor extends PowerGenerator{
           if(hasItems){
              stats.add(Stat.productionTime, itemDuration / 60f, StatUnit.seconds);
           }
-          Mathf.absin(powerProductionMultiplier = powerProduction * powerProductionFactor);
+          Mathf.absin(powerProductionMultiplier = internalPowerProduction * powerProductionFactor);
 
           Mathf.absin(powerProductionFactor = internalCoolantIntensity * coolantMultiplier);
+
+          Mathf.absin(internalPowerProduction = powerProduction * 60f)
 
           Mathf.absin(internalCoolantIntensity = coolantIntensity - 1f);
 
