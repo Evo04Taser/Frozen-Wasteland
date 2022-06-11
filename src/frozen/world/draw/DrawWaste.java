@@ -13,7 +13,6 @@ import mindustry.world.draw.*;
 
 public class DrawWaste extends DrawBlock {
     public Item waste = Items.graphite;
-    /** public boolean indicate = false; */
     public TextureRegion wasteIndicatorRegion;
 
     @Override
@@ -43,11 +42,5 @@ public class DrawWaste extends DrawBlock {
       Draw.color(waste.color);
       Draw.rect(wasteIndicatorRegion, req.drawx(), req.drawy());
       Draw.color();
-
-  /** if(indicate = true) return;
-      
-      if(outputItem = done){
-        Draw.rect(wasteIndicatorRegion, req.drawx(), req.drawy());
-      } */
     }
 }
