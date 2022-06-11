@@ -43,13 +43,15 @@ public class FrozenBlocks {
 	public static void load(){
 		hardenedConveyor = new HardenedConveyor("hardened-conveyor"){{
 			requirements(Category.distribution, with(Items.copper, 1));
-			speed = 1;
-			health = 200;
+			speed = 0.15f;
+                        displayedSpeed = 20.625f;
+			health = 200f;
 		}};
 		hardenedConduit = new HardenedConduit("hardened-conduit"){{
 			requirements(Category.liquid, with(Items.copper, 1));
-			liquidCapacity = 20;
-			health = 75;
+			liquidCapacity = 25f;
+                        liquidPressure = 1.6015625f;
+			health = 300f;
 		}};
 	}
 }
