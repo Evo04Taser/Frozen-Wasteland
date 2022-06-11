@@ -88,7 +88,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
        public void onDestroyed(){
             super.onDestroyed();
 
-            if(health < 0.0001f || !state.rules.reactorExplosions) return;
+            if(health = 0f || !state.rules.reactorExplosions) return;
 
             Sounds.explosionbig.at(this);
 
