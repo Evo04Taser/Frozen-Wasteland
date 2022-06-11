@@ -9,6 +9,9 @@ import arc.struct.*;
 import arc.util.*;
 import arc.util.io.*;
 import mindustry.content.*;
+import mindustry.content.Fx.*;
+import mindustry.content.Items.*;
+import mindustry.content.Liquids.*;*;
 import mindustry.entities.*;
 import mindustry.game.EventType.*;
 import mindustry.gen.*;
@@ -19,6 +22,7 @@ import mindustry.ui.*;
 import mindustry.world.consumers.*;
 import mindustry.world.meta.*;
 import mindustry.world.blocks.power.*;
+import mindustry.world.blocks.power.PowerGenerator*;
 
 import static mindustry.Vars.*;
 
@@ -34,6 +38,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
     public float coolantIntensity = 2f;
     public float explosionRadius = 19f;
     public float explosionDamage = 1250f;
+    public float powerProduction = 5f;
 
     protected float coolantMultiplier;
     protected float internalCoolantIntensity;
@@ -106,7 +111,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
           if(hasItems){
              stats.add(Stat.productionTime, itemDuration / 60f, StatUnit.seconds);
           }
-          Mathf.absin(powerProductionMultiplier = power * powerProductionFactor);
+          Mathf.absin(powerProductionMultiplier = powerProduction * powerProductionFactor);
 
           Mathf.absin(powerProductionFactor = internalCoolantIntensity * coolantMultiplier);
 
