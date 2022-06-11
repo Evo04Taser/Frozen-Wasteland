@@ -11,7 +11,7 @@ import mindustry.world.*;
 import mindustry.world.blocks.power.PowerGenerator.*;
 import mindustry.world.draw.*;
 
-public class DrawWaste extends DrawBlock {
+public class DrawWaste extends DrawBlock{
     public Item waste = Items.graphite;
     public TextureRegion wasteIndicatorRegion;
 
