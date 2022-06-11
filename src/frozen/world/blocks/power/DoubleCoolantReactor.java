@@ -123,7 +123,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
             ConsumeItem citem = fuel(ConsumeType.item);
 
             int fuel = items.get(fuel);
-            float power = (float)fuel * 1;
+            float power = (float)1;
             productionEfficiency = power + powerProductionMultiplier;
       }
 
