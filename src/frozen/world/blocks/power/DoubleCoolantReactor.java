@@ -79,9 +79,10 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
         bars.add("poweroutput", (GeneratorBuild entity) -> new Bar(() ->
         Core.bundle.format("bar.poweroutput",
-        Strings.fixed(Math.max(entity.getPowerProduction() - consumes.getPower().usage, 0) * 60)),
+        Strings.fixed(Math.max(entity.getPowerProduction() * multiplier() - consumes.getPower().usage, 0) * 60)),
         () -> Pal.powerBar,
-        () -> entity.productionEfficiency));
+        () -> Pal.powerProductionMultiplier,
+        () -> entity.productionEfficiency;
     }
 
     @Override
@@ -103,10 +104,6 @@ public class DoubleCoolantReactor extends PowerGenerator{
           super.setStats();
           if(hasItems){
              stats.add(Stat.productionTime, itemDuration / 60f, StatUnit.seconds);
-          }
-          stats.add(Stat.powerProduction, 60f / powerProduction, StatUnit.powerUnitsSecond);
-          if(coolantIntensity != 1){
-              stats.add(Stat.boostEffect, powerProductionMultiplier, StatUnit.timesPower);
           }
           Mathf.absin(powerProductionMultiplier = coolantIntensity * coolantMultiplier);
 
