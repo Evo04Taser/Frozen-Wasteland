@@ -43,5 +43,11 @@ public class DrawWaste extends DrawBlock {
       Draw.color(waste.color);
       Draw.rect(wasteIndicatorRegion, req.drawx(), req.drawy());
       Draw.color();
+
+  /** if(indicate = true) return;
+      
+      if(outputItem = done){
+        Draw.rect(wasteIndicatorRegion, req.drawx(), req.drawy());
+      } */
     }
 }
