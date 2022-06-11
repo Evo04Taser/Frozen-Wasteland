@@ -1,4 +1,3 @@
-/** WIP(WORK IN PROGRESS) 
 package frozen.world.draw;
 
 import arc.*;
@@ -14,8 +13,8 @@ import mindustry.world.draw.*;
 
 public class DrawWaste extends DrawBlock {
     public Item waste = Items.graphite;
-    public @Nullable Liquid liquidWaste;
-    public TextureRegion wasteRegion;
+    /** public boolean indicate = true; */
+    public TextureRegion wasteIndicatorRegion;
 
     @Override
     public void setStats(PowerGeneratorBuild build){
@@ -29,6 +28,20 @@ public class DrawWaste extends DrawBlock {
     @Override
     public void init(){
       outputsItem = waste != null;
-      outputsLiquid = liquidWaste != null;
       super.init();
-    } */
+    }
+
+    @Override
+    public void load(Block block){
+      wasteIndicator =  Core.atlas.find(block.name + "-wasteIndicator");
+    }
+
+    @Override
+    public void draw(){
+      if(waste = extant) return;
+
+      Draw.color(waste.color);
+      Draw.rect(itemRegion, req.drawx(), req.drawy());
+      Draw.color();
+    }
+}
