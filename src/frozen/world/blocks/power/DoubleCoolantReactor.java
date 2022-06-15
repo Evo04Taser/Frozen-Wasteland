@@ -11,7 +11,7 @@ import arc.util.io.*;
 import mindustry.content.*;
 import mindustry.content.Fx.*;
 import mindustry.content.Items.*;
-import mindustry.content.Liquids.*;*;
+import mindustry.content.Liquids.*;
 import mindustry.entities.*;
 import mindustry.game.EventType.*;
 import mindustry.gen.*;
@@ -22,7 +22,7 @@ import mindustry.ui.*;
 import mindustry.world.consumers.*;
 import mindustry.world.meta.*;
 import mindustry.world.blocks.power.*;
-import mindustry.world.blocks.power.PowerGenerator*;
+import mindustry.world.blocks.power.PowerGenerator.*;
 
 import static mindustry.Vars.*;
 
@@ -118,7 +118,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
           Mathf.absin(powerProductionFactor = internalCoolantIntensity * coolantMultiplier);
 
-          Mathf.absin(internalPowerProduction = powerProduction * 60f)
+          Mathf.absin(internalPowerProduction = powerProduction * 60f);
 
           Mathf.absin(internalCoolantIntensity = coolantIntensity - 1f);
 
