@@ -92,68 +92,68 @@ public class DoubleCoolantReactor extends PowerGenerator{
         () -> Pal.powerBar,
         () -> Pal.powerProductionMultiplier,
         () -> entity.productionEfficiency,
-    
+    }
 
     @Override
-       public void onDestroyed(){
-            super.onDestroyed();
+    public void onDestroyed(){
+      super.onDestroyed();
 
-            if(health = 0f || !state.rules.reactorExplosions) return;
+      if(health = 0f || !state.rules.reactorExplosions) return;
 
-            Sounds.explosionbig.at(this);
+      Sounds.explosionbig.at(this);
 
-            Damage.damage(x, y, explosionRadius * tilesize, explosionDamage * 4);
+      Damage.damage(x, y, explosionRadius * tilesize, explosionDamage * 4);
 
-            Effect.shake(6f, 16f, x, y);
-            explodeEffect.at(x, y);
-        }
+      Effect.shake(6f, 16f, x, y);
+      explodeEffect.at(x, y);
+    }
 
-        @Override
-        public void setStats(){
-          super.setStats();
-          if(hasItems){
-             stats.add(Stat.productionTime, itemDuration / 60f, StatUnit.seconds);
-          }
-          Mathf.absin(powerProductionMultiplier = internalPowerProduction * powerProductionFactor);
-
-          Mathf.absin(powerProductionFactor = internalCoolantIntensity * coolantMultiplier);
-
-          Mathf.absin(internalPowerProduction = powerProduction * 60f);
-
-          Mathf.absin(internalCoolantIntensity = coolantIntensity - 1f);
-
-          Mathf.absin(coolantMultiplier = liquidInput / liquidCapacity);
-
-          Mathf.absin(powerNeeded = liquidCapacity - liquidInput);
+    @Override
+    public void setStats(){
+      super.setStats();
+      if(hasItems){
+        stats.add(Stat.productionTime, itemDuration / 60f, StatUnit.seconds);
       }
+      Mathf.absin(powerProductionMultiplier = internalPowerProduction * powerProductionFactor);
 
-      @Override
-      public void updateTile(){
-            ConsumeLiquid cliquid = coolant(ConsumeType.liquid);
-            ConsumeItem citem = fuel(ConsumeType.item);
+      Mathf.absin(powerProductionFactor = internalCoolantIntensity * coolantMultiplier);
 
-            int fuel = items.get(fuel);
-            float power = (float)fuel * 1;
-            productionEfficiency = power + powerProductionMultiplier;
-      }
+      Mathf.absin(internalPowerProduction = powerProduction * 60f);
+
+      Mathf.absin(internalCoolantIntensity = coolantIntensity - 1f);
+
+      Mathf.absin(coolantMultiplier = liquidInput / liquidCapacity);
+
+      Mathf.absin(powerNeeded = liquidCapacity - liquidInput);
+    }
+
+    @Override
+    public void updateTile(){
+          ConsumeLiquid cliquid = coolant(ConsumeType.liquid);
+          ConsumeItem citem = fuel(ConsumeType.item);
+
+          int fuel = items.get(fuel);
+          float power = (float)fuel * 1;
+          productionEfficiency = power + powerProductionMultiplier;
+    }
 
       
 
-      public class DoubleCoolantReactorBuild extends GeneratorBuild{
-         @Override
-          public void draw(){
-             super.draw();
+    public class DoubleCoolantReactorBuild extends GeneratorBuild{
+        @Override
+        public void draw(){
+           super.draw();
 
-             Draw.color(liquids.current().color);
-             Draw.alpha(liquids.currentAmount() / liquidCapacity);
-             Draw.rect(liquidRegion, x, y);
-             Draw.z(Layer.blockOver + 0.2f);
-             Draw.rect(topRegion, x, y);
-         }
+           Draw.color(liquids.current().color);
+           Draw.alpha(liquids.currentAmount() / liquidCapacity);
+           Draw.rect(liquidRegion, x, y);
+           Draw.z(Layer.blockOver + 0.2f);
+           Draw.rect(topRegion, x, y);
+        }
 
-           @Override
-           public float efficiencyScale(){
-              return baseEfficiency + powerProductionMultiplier();
-           }
-      }
+        @Override
+        public float efficiencyScale(){
+           return baseEfficiency + powerProductionMultiplier();
+        }
+    }
 }
