@@ -91,7 +91,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
         Strings.fixed(Math.max(entity.getPowerProduction() * multiplier() - consumes.getPower().usage, 0) * 60)),
         () -> Pal.powerBar,
         () -> Pal.powerProductionMultiplier,
-        ( -> entity.productionEfficiency;
+        () -> entity.productionEfficiency;
     }
 
     @Override
