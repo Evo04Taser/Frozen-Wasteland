@@ -11,7 +11,7 @@ public class FrozenItems implements ContentList{
     @Override
     public void load(){
         snow = new Item("snow", Color.valueOf("e8e8e8")){{
-            hardness = 0.3;
+            hardness = 0.3f;
             cost = 0.7f;
             alwaysUnlocked = true;
         }};
