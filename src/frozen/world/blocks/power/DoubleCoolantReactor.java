@@ -88,7 +88,7 @@ public class DoubleCoolantReactor extends PowerGenerator{
 
         bars.add("poweroutput", (GeneratorBuild entity) -> new Bar(() ->
         Core.bundle.format("bar.poweroutput",
-        Strings.fixed(Math.max(entity.getPowerProduction() * multiplier() - consumes.getPower().usage, 0) * 60)),
+        Strings.fixed(Math.max(entity.getPowerProduction() + multiplier() - consumes.getPower().usage, 0) * 60)),
         () -> Pal.powerBar,
         () -> Pal.powerProductionMultiplier,
         () -> entity.productionEfficiency
