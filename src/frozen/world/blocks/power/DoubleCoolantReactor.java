@@ -92,8 +92,8 @@ public class DoubleCoolantReactor extends PowerGenerator{
         () -> Pal.powerBar,
         () -> Pal.powerProductionMultiplier,
         () -> entity.productionEfficiency,
-        )                                                        
-      );  
+        );                                    
+      );
     }
 
     @Override
