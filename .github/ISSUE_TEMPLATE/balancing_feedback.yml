@@ -1,5 +1,5 @@
 name: Balancing Feedback
-about: Create a feedback to balance an item/block
+description: Create a feedback to balance an item/block
 title: "Title"
 labels: [invalid]
 body:
