@@ -7,7 +7,10 @@ assignees: ''
 
 ---
 
-**Why is an item/block overpowered?**
+**What is the overpowered item/block?**
+Write the overpowered item/block here.
+
+**Why is the item/block overpowered?**
 A clear description of why the item/block is overpowered.
 
 **How to balance the item/block?**
