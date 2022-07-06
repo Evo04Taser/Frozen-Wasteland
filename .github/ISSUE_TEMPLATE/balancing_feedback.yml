@@ -12,7 +12,7 @@ body:
   - type: textarea
     id: description2
     attributes:
-      label: "Why is an item/block overpowered?"
+      label: "Why is the item/block overpowered?"
     validations:
       required: true
   - type: textarea
