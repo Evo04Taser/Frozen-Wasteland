@@ -14,4 +14,4 @@ A clear description of why the item/block is overpowered.
 A clear description of how to balance the item/block.
 
 **Additional context**
-Add any other context or screenshots about the feature request here.
+Add any other context or screenshots about the feedback here.
