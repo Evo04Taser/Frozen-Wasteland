@@ -1,8 +1,8 @@
 name: Balancing Feedback
 about: Create a feedback to balance an item/block
-title: ''
-labels: ''
-assignees: ''
+title: OP items/blocks
+labels:
+assignees:
 body:
   - type: textarea
     id: description

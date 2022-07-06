@@ -1,8 +1,8 @@
 name: Bug Report
 about: Create a report to improve the mod
-title: ''
-labels: ''
-assignees: ''
+title: There's a bug in the mod
+labels:
+assignees:
 body:
   - type: textarea
     id: description
