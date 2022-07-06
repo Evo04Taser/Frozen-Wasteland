@@ -1,20 +1,30 @@
----
 name: Balancing Feedback
 about: Create a feedback to balance an item/block
 title: ''
 labels: ''
 assignees: ''
-
----
-
-**What is the overpowered item/block?**
-Write the overpowered item/block here.
-
-**Why is the item/block overpowered?**
-A clear description of why the item/block is overpowered.
-
-**How to balance the item/block?**
-A clear description of how to balance the item/block.
-
-**Additional context**
-Add any other context or screenshots about the feedback here.
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "What is the overpowered item/block?"
+    validations:
+      required: true
+  - type: textarea
+    id: description2
+    attributes:
+      label: "Why is an item/block overpowered?"
+    validations:
+      required: true
+  - type: textarea
+    id: description3
+    attributes:
+      label: "How to balance the item/block?"
+    validations:
+      required: true
+  - type: textarea
+    id: optionaldescription
+    attributes:
+      label: "Additional context"
+    validations:
+      required: false
